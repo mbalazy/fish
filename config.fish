@@ -7,6 +7,6 @@ zoxide init fish | source
 
 set fish_greeting
 
-source ./aliases
-source ./exports
 source ./path
+source ./exports
+source ./aliases
