@@ -12,6 +12,8 @@ fish_add_path $ANDROID_HOME/emulator
 fish_add_path $ANDROID_HOME/platform-tools
 fish_add_path $ANDROID_HOME/cmdline-tools/10.0/bin
 
-fish_add_path /.cargo/bin:$PATH
-fish_add_path /.local/share/go/bin:$PATH
+fish_add_path /.cargo/bin
+fish_add_path /.local/share/go/bin
 fish_add_path /.local/share/go
+
+# $HOME/.local/share/nvim/mason/bin

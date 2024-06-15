@@ -4,6 +4,12 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export GOPATH=$HOME/.local/share/go
 
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 export MANPAGER='lvim +Man!'
+export LESS='iMRS'
+
+# for fish/lazygit
+export XDG_CONFIG_HOME="$HOME/.config"
