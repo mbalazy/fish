@@ -3,6 +3,11 @@
 fish_add_path -m ~/.local/bin
 fish_add_path $HOME/.cargo/bin
 
+# fish_add_path (find "$HOME/.sdkman/candidates/maven/current/bin" -maxdepth 0)
+# fish_add_path (find "$HOME/.sdkman/candidates/kotlin/current/bin" -maxdepth 0)
+fish_add_path (find "$HOME/.sdkman/candidates/java/current/bin" -maxdepth 0)
+# fish_add_path (find "$HOME/.sdkman/candidates/gradle/current/bin" -maxdepth 0)
+
 fish_add_path $HOME/.rvm/bin
 fish_add_path /opt/homebrew/bin
 
