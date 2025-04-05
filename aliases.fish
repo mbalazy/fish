@@ -6,7 +6,8 @@ alias git-apply="pbpaste | git apply"
 
 alias clr="clear"
 
-alias v="lvim"
+alias v="nvim"
+alias vs="nvim +SessionLoad"
 
 alias tm="tmux"
 alias tms="tmux attach-session -t"
