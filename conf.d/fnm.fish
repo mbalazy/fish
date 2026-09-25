@@ -7,9 +7,14 @@ function __fnm_load
     functions -e fnm node npm yarn npx
     # Quiet the "Using Node vX" line the hook prints on every new tab.
     set -gx FNM_LOGLEVEL quiet
-    # The sourced output already runs _fnm_autoload_hook, which applies
-    # .nvmrc / .node-version in cwd.
     command fnm env --use-on-cd | source
+    # The sourced output runs _fnm_autoload_hook, but that hook bails out
+    # inside a command substitution - so `set v (node --version)` as the first
+    # node call would stick the shell on fnm's default version. Apply cwd's
+    # version explicitly; --silent-if-unchanged makes it a no-op otherwise.
+    if test -f .nvmrc; or test -f .node-version
+        command fnm use --silent-if-unchanged 2>/dev/null
+    end
 end
 
 function fnm --description "Fast Node Manager with lazy loading"
